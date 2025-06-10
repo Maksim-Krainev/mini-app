@@ -3,7 +3,7 @@ import React from 'react'
 export default function BusinessPage() {
 	return (
 		<div>
-			<h2>Бізнес</h2>
+			<h2>Бизнес</h2>
 
 		</div>
 	)

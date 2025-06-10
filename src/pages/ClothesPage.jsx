@@ -2,12 +2,16 @@ import React, { useState } from 'react'
 import skin1 from '../assets/skins/13.png'
 import skin2 from '../assets/skins/12.png'
 import skin3 from '../assets/skins/11.png'
-// Додай свої скіни сюди
+import skin4 from '../assets/skins/15380.png'
+import skin5 from '../assets/skins/15590.png'
+
 
 const skins = [
 	{ id: 1, name: 'Классика', img: skin1 },
 	{ id: 2, name: 'Хайп', img: skin2 },
 	{ id: 3, name: 'Бандит', img: skin3 },
+	{ id: 4, name: 'Бандит', img: skin4 },
+	{ id: 5, name: 'Бандит', img: skin5 },
 ]
 
 export default function ClothesPage({ onBack }) {

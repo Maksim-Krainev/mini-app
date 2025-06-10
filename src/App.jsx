@@ -8,6 +8,7 @@ import WalkPage from './pages/WalkPage'
 import DonatePage from './pages/DonatePage'
 import BottomMenu from './components/BottomMenu'
 import ClothesPage from './pages/ClothesPage'
+import TopPage from './pages/TopPage'
 
 export default function App() {
 	const [boosts, setBoosts] = useState(3)
@@ -40,6 +41,8 @@ export default function App() {
 		PageComponent = <DonatePage />
 	} else if (page === 'clothes') {
 		PageComponent = <ClothesPage onBack={() => setPage('main')} />
+	} else if (page === 'top') {
+		PageComponent = <TopPage onBack={() => setPage('main')} />
 	}
 
 	return (

@@ -1,4 +1,5 @@
 import React from 'react'
+import './status.css'
 
 export default function StatusBlock({ statusIcon, status }) {
 	return (

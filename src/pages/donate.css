@@ -1,0 +1,189 @@
+.donate-page {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 80px; /* тільки padding, не height! */
+    background: none;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+  }
+  
+  
+  .donate-title {
+    font-weight: 700;
+    font-size: 1.22rem;
+    margin: 20px 0 15px 0;
+    letter-spacing: 0.02em;
+  }
+  
+  .donate-list {
+    width: 100%;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+  
+  .donate-card {
+    background: linear-gradient(120deg, #253048 0%, #26345a 100%);
+    border-radius: 17px;
+    padding: 14px 16px 18px 16px;
+    box-shadow: 0 2px 14px #1d273444;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .donate-card-title {
+    font-weight: 600;
+    font-size: 1.07rem;
+    margin-bottom: 5px;
+  }
+  
+  .donate-exchange-row {
+    font-size: 0.97rem;
+    color: #b7cae7;
+    margin-bottom: 6px;
+  }
+  
+  .donate-old-rate {
+    text-decoration: line-through;
+    color: #b86d6d;
+  }
+  
+  .donate-new-rate {
+    margin-left: 8px;
+    color: #86f587;
+    font-weight: 700;
+    font-size: 1.06rem;
+    border-bottom: 1.5px dashed #83d866;
+  }
+  
+  /* VIP і Водка горизонтальні блоки */
+  .donate-row {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 11px !important;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .donate-card-col {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .donate-vip-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 11px;
+    box-shadow: 0 3px 12px #ffe97c33;
+    background: #e3cc68;
+    object-fit: contain;
+    margin-right: 7px;
+  }
+  
+  .donate-vip-title {
+    font-weight: 700;
+    font-size: 1.06rem;
+  }
+  .donate-vip-bonus {
+    font-size: 0.95rem;
+    color: #e3c554;
+  }
+  .donate-vip-price {
+    margin-top: 4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .donate-vodka-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    box-shadow: 0 2px 7px #f7f7f75e;
+    background: #fff;
+    object-fit: contain;
+    margin-right: 7px;
+  }
+  .donate-vodka-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .donate-vodka-bonus {
+    font-size: 0.95rem;
+    color: #c6d3ee;
+  }
+  .donate-vodka-price {
+    margin-top: 4px;
+    color: #b2e8f2;
+    font-weight: 600;
+    font-size: 0.99rem;
+  }
+  
+  /* Кнопка в донат картці */
+  .donate-card .menu-btn {
+    width: 100%;
+    margin-top: 12px;
+    min-width: 90px;
+    max-width: 220px;
+    font-size: 1.03rem;
+    padding: 9px 0;
+  }
+  
+  /* Адаптація для мобільних */
+  @media (max-width: 600px) {
+    .donate-page {
+      max-width: 100vw;
+      padding-bottom: 65px;
+    }
+    .donate-list {
+      max-width: 99vw;
+      gap: 11px;
+    }
+    .donate-card {
+      padding: 11px 7px 15px 7px;
+      border-radius: 11px;
+      max-width: 97vw;
+      min-width: 0;
+      font-size: 0.95rem;
+    }
+    .donate-row {
+      gap: 7px !important;
+    }
+    .donate-card .menu-btn {
+      max-width: 99vw;
+      font-size: 0.98rem;
+      padding: 8px 0;
+    }
+    .donate-vip-img,
+    .donate-vodka-img {
+      width: 38px !important;
+      height: 38px !important;
+      margin-right: 6px;
+    }
+  }
+  
+  /* Додатково для дуже вузьких екранів */
+  @media (max-width: 500px) {
+    .donate-card {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center;
+      gap: 7px !important;
+    }
+    .donate-row {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 5px !important;
+    }
+  }
+  

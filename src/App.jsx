@@ -3,8 +3,6 @@ import './App.css'
 
 import MainPage from './pages/MainPage'
 import QuestsPage from './pages/QuestsPage'
-import BusinessPage from './pages/BusinessPage'
-import WalkPage from './pages/WalkPage'
 import DonatePage from './pages/DonatePage'
 import BottomMenu from './components/BottomMenu'
 import ClothesPage from './pages/ClothesPage'
@@ -33,10 +31,6 @@ export default function App() {
 		)
 	} else if (page === 'quests') {
 		PageComponent = <QuestsPage />
-	} else if (page === 'business') {
-		PageComponent = <BusinessPage />
-	} else if (page === 'walk') {
-		PageComponent = <WalkPage />
 	} else if (page === 'donate') {
 		PageComponent = <DonatePage />
 	} else if (page === 'clothes') {

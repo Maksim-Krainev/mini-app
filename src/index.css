@@ -1,0 +1,156 @@
+/* index.css — ОБНУЛЕНИЕ И БАЗА */
+
+/* 1. Сброс box-sizing для всего */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Сброс margin/padding для всех */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  main, menu, nav, output, ruby, section, summary,
+  time, mark, audio, video, input, button, textarea, select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* 3. Удаляем список маркеры */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* 4. Удаляем декор у ссылок */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* 5. Сброс outline на кнопках и инпутах */
+  button,
+  input,
+  select,
+  textarea {
+    outline: none;
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+    box-shadow: none;
+    resize: none;
+  }
+  
+  /* 6. Базовые стили для html и body */
+  html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #131826;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #eaf1fa;
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  
+  /* 7. Убираем выделение картинок */
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 8. Курсор по умолчанию для кнопок */
+  button {
+    cursor: pointer;
+    background: none;
+  }
+  
+  /* 9. Удаляем дефолтные стили fieldset и legend */
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  legend {
+    display: block;
+    padding: 0;
+  }
+  
+  /* 10. Для формы — удаляем лишний space */
+  form {
+    display: block;
+  }
+  
+  /* 11. Базовые стили для strong и b */
+  b, strong {
+    font-weight: bold;
+  }
+  
+  /* 12. Для input[type="search"] — без декора */
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+  
+  /* 13. Убираем webkit autofill фон */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #131826 inset !important;
+    -webkit-text-fill-color: #eaf1fa !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+  /* 14. Обнуляем таблицы */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td, th {
+    padding: 0;
+  }
+  
+  /* 15. Сброс для svg */
+  svg {
+    vertical-align: middle;
+  }
+  
+  /* 16. Убираем жирность у i и em */
+  i, em {
+    font-style: italic;
+    font-weight: normal;
+  }
+  
+  /* 17. Обнуляем quotes у blockquote/quote */
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote::before, blockquote::after,
+  q::before, q::after {
+    content: '';
+    content: none;
+  }
+  
+  /* 18. Для мобильных — убираем double-tap zoom */
+  html {
+    touch-action: manipulation;
+  }
+  

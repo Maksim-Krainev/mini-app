@@ -3,6 +3,7 @@ import BoostsBar from '../components/BoostsBar'
 import MoneyBar from '../components/MoneyBar'
 import CharacterTap from '../components/CharacterTap'
 import StatusBlock from '../components/StatusBlock'
+import './mainpage.css'
 
 import boostImg from '../assets/drinks/3.png'
 import moneyImg from '../assets/47.png'
@@ -11,53 +12,31 @@ import statusIcon from '../assets/vip/1.png'
 import shortIcon from '../assets/gps/22.png'
 import topIcon from '../assets/gps/31.png'
 
-
-
-export default function MainPage({ boosts, money, status, handleTap, setPage }) {
+export default function MainPage({
+	boosts,
+	money,
+	status,
+	handleTap,
+	setPage,
+}) {
 	return (
 		<>
 			<div className='top-bar'>
 				<BoostsBar boostImg={boostImg} boosts={boosts} />
 				<MoneyBar money={money} moneyImg={moneyImg} />
 			</div>
-			<div
-				style={{
-					display: 'flex',
-					gap: 18,
-					marginTop: 16,
-					justifyContent: 'center',
-					width: '100%',
-				}}
-			>
+			<div className='mainpage-menu-buttons'>
 				<button
-					className='menu-btn'
-					style={{
-						alignSelf: 'center',
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						width: 62,
-						height: 62,
-						padding: 0,
-					}}
+					className='menu-btn mainpage-menu-btn'
 					onClick={() => setPage('clothes')}
 				>
-					<img src={shortIcon} alt='Шорты' style={{ width: 38, height: 38 }} />
+					<img src={shortIcon} alt='Шорты' className='mainpage-menu-icon' />
 				</button>
 				<button
-					className='menu-btn'
-					style={{
-						alignSelf: 'center',
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						width: 62,
-						height: 62,
-						padding: 0,
-					}}
+					className='menu-btn mainpage-menu-btn'
 					onClick={() => setPage('top')}
 				>
-					<img src={topIcon} alt='ТОП' style={{ width: 38, height: 38 }} />
+					<img src={topIcon} alt='ТОП' className='mainpage-menu-icon' />
 				</button>
 			</div>
 			<div className='center-content'>

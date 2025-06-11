@@ -1,9 +1,8 @@
 import React from 'react'
+import './bottommenu.css'
 
 export default function BottomMenu({ active, onMenuClick }) {
 	const buttons = [
-		{ name: 'Прогулка', id: 'walk' },
-		{ name: 'Бизнес', id: 'business' },
 		{ name: 'Главная', id: 'main' },
 		{ name: 'Квесты', id: 'quests' },
 		{ name: 'Донат', id: 'donate' },

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import './charactertap.css'
 
 export default function CharacterTap({ characterImg, onTap }) {
 	const [pluses, setPluses] = useState([])

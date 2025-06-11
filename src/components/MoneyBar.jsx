@@ -1,4 +1,5 @@
 import React from 'react'
+import './moneybar.css'
 
 export default function MoneyBar({ money, moneyImg }) {
 	return (

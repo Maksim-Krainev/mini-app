@@ -1,0 +1,45 @@
+/* Контейнер с бустами */
+.boosts {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: none;
+  }
+  
+  /* Иконка буста */
+  .boost-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #22335533;
+    background: #202b3a;
+  }
+  
+  /* Количество бустов */
+  .boost-count {
+    margin-left: 8px;
+    font-size: 1.12rem;
+    font-weight: bold;
+    color: #92e0fe;
+    text-shadow: 0 2px 8px #202f4780;
+    letter-spacing: 0.03em;
+    min-width: 24px;
+    display: inline-block;
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 550px) {
+    .boost-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+    }
+    .boost-count {
+      font-size: 1.01rem;
+      margin-left: 6px;
+      min-width: 20px;
+    }
+  }
+  

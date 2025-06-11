@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './clothes.css'
 import skin1 from '../assets/skins/13.png'
 import skin2 from '../assets/skins/12.png'
 import skin3 from '../assets/skins/11.png'

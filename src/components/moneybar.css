@@ -1,0 +1,42 @@
+.money {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: none;
+  }
+  
+  .money-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #22335533;
+    background: #203236;
+    margin-left: 8px;
+  }
+  
+  .money-count {
+    font-size: 1.12rem;
+    font-weight: bold;
+    color: #ffd682;
+    text-shadow: 0 2px 8px #2c210880;
+    letter-spacing: 0.03em;
+    min-width: 32px;
+    display: inline-block;
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 550px) {
+    .money-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      margin-left: 6px;
+    }
+    .money-count {
+      font-size: 1.01rem;
+      min-width: 22px;
+    }
+  }
+  

@@ -1,0 +1,57 @@
+/* Область для тапа */
+.tap-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.13s;
+    user-select: none;
+  }
+  .tap-area:active {
+    transform: scale(0.96);
+  }
+  
+  /* Персонаж в центре */
+  .character {
+    width: 420px;
+    height: 420px;
+    object-fit: contain;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    box-shadow: 0 7px 38px #2a3d5740, 0 2px 7px #16233d4a;
+    background: linear-gradient(120deg, #27304a 0%, #31405c 100%);
+    display: block;
+  }
+  
+  /* Анимация +1 */
+  .plus-one {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #7bb4f3;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    text-shadow: 0 2px 10px #233b5ea6;
+    animation: plus-move 0.7s cubic-bezier(.44,1.4,.49,.98);
+    z-index: 2;
+  }
+  
+  /* Ключевые кадры для движения +1 вверх и исчезновения */
+  @keyframes plus-move {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-60px) scale(1.5);}
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 550px) {
+    .character {
+      width: 86vw;
+      height: 86vw;
+      min-width: 150px;
+      min-height: 150px;
+      max-width: 98vw;
+      max-height: 98vw;
+    }
+  }
+  

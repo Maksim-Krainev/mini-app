@@ -1,328 +1,75 @@
-body, #root {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1e2333 0%, #31405c 100%);
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  color: #eaf1fa;
-  overflow-x: hidden;
-}
-
+/* Фон всего приложения */
 .main-bg {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: none;
-}
-
-.container {
-  width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
-  padding: 0 12px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-  min-height: 100vh;
-}
-
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 0 10px 0;
-  width: 100%;
-}
-
-.boosts, .money {
-  display: flex;
-  align-items: center;
-}
-
-.boost-icon, .money-icon {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-}
-
-.boost-count, .money-count {
-  margin-left: 8px;
-  font-size: 1.12rem;
-  font-weight: bold;
-  text-shadow: 0 2px 8px #202f4780;
-}
-
-/* Центр */
-.center-content {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.tap-area {
-  cursor: pointer;
-  transition: transform 0.13s;
-}
-
-.tap-area:active {
-  transform: scale(0.96);
-}
-
-.character {
-  width: 420px;
-  height: 420px;
-  object-fit: contain;
-  margin-bottom: 14px;
-  border-radius: 50%;
-  box-shadow: 0 7px 38px #2a3d5740, 0 2px 7px #16233d4a;
-  background: linear-gradient(120deg, #27304a 0%, #31405c 100%);
-}
-
-.status-block {
-  display: flex;
-  align-items: center;
-  margin-top: 7px;
-  padding: 8px 20px;
-  border-radius: 14px;
-  background: rgba(32,40,63,0.93);
-  box-shadow: 0 2px 10px #232f4470;
-}
-
-.status-icon {
-  width: 22px;
-  height: 22px;
-  margin-right: 8px;
-  object-fit: contain;
-}
-
-.status-text {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-/* Нижнє меню */
-.bottom-menu {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 -2px 14px #232f447a;
-  padding: 7px 0 6px 0;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  max-width: 430px;
-  margin: 0 auto;
-  border-radius: 0 0 12px 12px;
-}
-
-.menu-btn, .clothes-back-btn {
-  background: linear-gradient(120deg, #344159 0%, #496fa6 100%);
-  border: none;
-  color: #f1f5ff;
-  font-size: 1.13rem;
-  font-weight: 600;
-  padding: 13px 0;
-  border-radius: 13px;
-  transition: background 0.21s, box-shadow 0.16s, color 0.16s, transform 0.07s;
-  margin: 0 2px;
-  cursor: pointer;
-  outline: none;
-  min-width: 112px;
-  box-shadow: 0 2px 14px #29487b23;
-  letter-spacing: 0.12px;
-  width: 100%;
-  max-width: 330px;
-  display: block;
-  border-bottom: 2px solid #334b7a44;
-}
-
-.menu-btn.active, .menu-btn:focus, .clothes-back-btn:focus {
-  background: linear-gradient(120deg, #5875a9 0%, #304060 100%);
-  color: #fff;
-  font-weight: 700;
-  box-shadow: 0 4px 15px #3e4f7088;
-  transform: scale(1.04);
-  border-bottom: 2px solid #b8dcff33;
-}
-
-.menu-btn:hover:not(.active), .clothes-back-btn:hover {
-  background: linear-gradient(120deg, #6e90c6 0%, #415b8c 100%);
-  color: #f7fcff;
-  box-shadow: 0 7px 25px #233b6b23;
-  transform: scale(1.04);
-  border-bottom: 2px solid #e8f6ff33;
-}
-
-/* +1 анимация */
-.plus-one {
-  position: absolute;
-  font-size: 1.5rem;
-  color: #7bb4f3;
-  font-weight: bold;
-  user-select: none;
-  pointer-events: none;
-  animation: plus-move 0.7s cubic-bezier(.44,1.4,.49,.98);
-  text-shadow: 0 2px 10px #233b5ea6;
-}
-@keyframes plus-move {
-  from { opacity: 1; transform: translateY(0); }
-  to   { opacity: 0; transform: translateY(-60px) scale(1.5);}
-}
-
-/* ClothesPage та скіни */
-.clothes-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1 1 auto;
-  min-height: 100vh;
-  padding-bottom: 70px;
-  width: 100%;
-}
-
-.clothes-title {
-  margin: 22px 0 22px 0;
-  font-size: 1.23rem;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0.12px;
-}
-
-.clothes-skins-list {
-  width: 100%;
-  max-width: 380px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  justify-content: center;
-  margin-bottom: 22px;
-  flex: 1 1 auto;
-  align-content: flex-start;
-  min-height: 180px;
-  background: rgba(42, 56, 82, 0.16);
-  border-radius: 14px;
-  padding: 10px 4px 10px 4px;
-  box-shadow: 0 1px 9px #243e6d19;
-}
-
-.clothes-skin-item {
-  border: 2px solid #313e59;
-  border-radius: 17px;
-  background: linear-gradient(120deg, #253147aa 0%, #35405d94 100%);
-  padding: 16px 7px 12px 7px;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0 2px 9px #202d4b22;
-  transition: border 0.14s, box-shadow 0.14s, transform 0.09s, background 0.18s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.clothes-skin-item.selected {
-  border: 2.5px solid #85a8f8;
-  box-shadow: 0 3px 14px #8fc5ff29;
-  transform: scale(1.022);
-  background: linear-gradient(120deg, #425078cc 0%, #7eb2e6bb 100%);
-}
-.clothes-skin-img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 2px 11px #2d3b6c32;
-}
-.clothes-skin-name {
-  margin-top: 7px;
-  font-size: 1.01rem;
-  font-weight: 600;
-  color: #d9e2f3;
-  letter-spacing: 0.02em;
-}
-
-/* Кнопка назад */
-.clothes-back-btn {
-  margin-top: auto;
-  width: 100%;
-  max-width: 320px;
-  margin-bottom: 16px;
-}
-
-/* --- Мобільна адаптація --- */
-@media (max-width: 550px) {
-  .container, .bottom-menu {
-    max-width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #1e2333 0%, #31405c 100%);
   }
-  .character {
-    width: 86vw;
-    height: 86vw;
-    min-width: 150px;
-    min-height: 150px;
-    max-width: 98vw;
-    max-height: 98vw;
+  
+  html, body, #root, .main-bg, .container {
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
   }
-  .clothes-skins-list {
-    gap: 8px;
-    min-height: 80px;
-    max-width: 99vw;
-    padding: 5px 2px 6px 2px;
+  
+  /* Контейнер */
+  .container {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* не min-height! */
+    height: 100%;
+    background: none;
+    justify-content: flex-start;
+    position: relative;
   }
-  .clothes-skin-img {
-    width: 100px;
-    height: 100px;
+  /* Мобильная адаптация — контейнер во всю ширину */
+  @media (max-width: 550px) {
+    .container {
+      max-width: 100vw;
+      padding: 0 2vw;
+    }
+    .main-bg {
+      padding-bottom: 50px;
+    }
   }
-  .clothes-back-btn {
-    max-width: 99vw;
-  }
-  .menu-btn, .clothes-back-btn {
-    font-size: 0.96rem;
-    padding: 9px 0;
-    min-width: 65px;
-    max-width: 99vw;
-    border-radius: 10px;
-  }
-  .bottom-menu {
-    padding: 2px 0 2px 0;
-    border-radius: 0 0 8px 8px;
-  }
-  .main-bg {
-    padding-bottom: 48px;
-  }
-}
+  
+  /* Нижнє меню */
 
-/* Модалка */
-.modal {
-  position: fixed;
-  z-index: 1000;
-  left: 0; right: 0; top: 0; bottom: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(18,20,32, 0.85);
-}
-.modal > * {
-  background: #23253a;
-  border-radius: 18px;
-  padding: 30px 24px 18px 24px;
-  box-shadow: 0 4px 24px #0009;
-  min-width: 300px;
-  color: #fff;
-}
+  
+  /* Щоб контент не потрапляв під меню */
+  .donate-page, .main-page, .quests-page, .clothes-page {
+    padding-bottom: 70px; /* нижче меню */
+    min-height: calc(100vh - 0px);
+    /* НЕ height: 100vh, інакше меню додає скролл! */
+  }
+  
+  /* Заборонити скрол горизонтально */
+  body {
+    overflow-x: hidden !important;
+  }
 
-.top-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-align: center;
-  color: #fffbcc;
-  margin-bottom: 10px;
-}
-
-.top-list {
-  margin-bottom: 18px;
-}
-
+  @media (max-width: 550px) {
+    .container, .bottom-menu {
+      max-width: 100vw;
+      padding: 0 2vw;
+    }
+    .donate-page, .main-page, .quests-page, .clothes-page {
+      padding-bottom: 60px;
+      min-height: calc(100vh - 0px);
+    }
+    .bottom-menu {
+      padding: 2px 0 2px 0;
+      border-radius: 0 0 8px 8px;
+    }
+    .main-bg {
+      padding-bottom: 0;
+    }
+  }
+  

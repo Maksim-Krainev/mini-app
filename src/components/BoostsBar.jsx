@@ -1,4 +1,5 @@
 import React from 'react'
+import './booststar.css'
 
 export default function BoostsBar({ boostImg, boosts }) {
 	return (
